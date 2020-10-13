@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="static/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Transcriber
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!-- Fonts and icons -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <!-- CSS Files -->
+  <link href="static/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="static/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
+  <!-- CSS -->
+  <link href="static/demo/demo.css" rel="stylesheet" />
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="navbar">
+      <h2> </h2>
+  </div>
+  <hr>
+ 
+<!-- <h3 style="width:center">β-Version</h3><br><br><br> -->
+
+  <div class="container">
+  <h2 style="width:center">Transcriber App  (β-Version)</h2>
+ 
+  <div class="card" style="width:center">
+
+    <!-- <h1>E-Mail</h1>
+    <form method="POST" action="/upload">
+    <div class='form-group'>
+    <input type="text" name="email" value="file"></div></form> -->
+     
+    <div class="card-body ">
+      <form action="/audiototext" method="post" enctype="multipart/form-data">
+      <p class="card-text">1) Select a file to transcribe:</p>
+        <input type="file" name="file" multiple><br><br>
+        
+        <p class="card-text">2) Enter email address to receive transcription</p>
+        <label>E-mail:</label>
+       <input type="text" name="email" >
+
+      <input type="submit" name="audiototext" value="Upload" class="btn btn-success">
+      </form>
+      {{msg}}
+      {{file_type}}
+      <!-- {{file_list}} -->
+      <!-- {{msg2}} -->
+
+
+
+    </div><br>
+
+    <div class="card-body ">
+      <h5>Enabling less secure apps to access Gmail 
+      </h5>
+      <label>
+
+        <b> •You can enable less secure apps by going to <a href="https://myaccount.google.com/lesssecureapps">my account</a> if you are already logged into your google account or by visiting <a href="">support.google</a>.</b><br><br>
+        <b>•The transcription file will be sent as a .json file which can be opened using notepad
+         </b><br><br>
+        <!-- •Alternatively you can follow the instructions:<br>
+        a) Open your Google Admin console (admin.google.com).<br>
+b) Click Security > Basic settings.<br>
+c) Under Less secure apps, select Go to settings for less secure apps.<br>
+d)In the subwindow, select the Enforce access to less secure apps for all users radio button.
+(You can also use the Allow users to manage their access to less secure apps, but don't forget to turn on the less secure apps option in users settings then!)<br>
+e) Click the Save button.<br><br> -->
+
+<!-- <b>* You can also enable less secure apps by going to <a href="https://myaccount.google.com/lesssecureapps">my account</a> if you are already logged into your google account or by visiting <a href="">support.google</a>.</b><br><br> -->
+<b>*This app only works with GMail, so make sure to provide a working GMail account to receive transcription file</b>
+
+
+
+      </label>
+
+
+
+
+  </div>
+  <br>
+</div>
+
+</body>
+
+</html>
