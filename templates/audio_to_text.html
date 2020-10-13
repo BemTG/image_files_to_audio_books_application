@@ -27,7 +27,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 
-<body>
+<body style="background-color:black;>
   <div class="navbar">
       <h2> </h2>
   </div>
@@ -35,22 +35,24 @@
  
 <!-- <h3 style="width:center">β-Version</h3><br><br><br> -->
 
-  <div class="container">
-  <h2 style="width:center">Transcriber App  (β-Version)</h2>
+  <div class="container" >
+  <h2 color="white" style="width:center; color:white" >Turn your notes and hard copy books to mp3 audio files  (β-Version)</h2>
  
-  <div class="card" style="width:center">
+  <div class="card" style="width:center ;color:black ">
 
     <!-- <h1>E-Mail</h1>
     <form method="POST" action="/upload">
     <div class='form-group'>
     <input type="text" name="email" value="file"></div></form> -->
      
-    <div class="card-body ">
+    <div class="card-body" >
       <form action="/audiototext" method="post" enctype="multipart/form-data">
-      <p class="card-text">1) Select a file to transcribe:</p>
+              <p class="card-text"> <b>Simply upload images from chapters of your old books or upload pdf files to receive audio versions of them</b> </p>
+        
+      <p class="card-text">1) Select a series of JPEG images or upload a single pdf file:</p>
         <input type="file" name="file" multiple><br><br>
         
-        <p class="card-text">2) Enter email address to receive transcription</p>
+        <p class="card-text">2) Enter email address to receive audio file</p>
         <label>E-mail:</label>
        <input type="text" name="email" >
 
@@ -71,7 +73,16 @@
       <label>
 
         <b> •You can enable less secure apps by going to <a href="https://myaccount.google.com/lesssecureapps">my account</a> if you are already logged into your google account or by visiting <a href="">support.google</a>.</b><br><br>
-        <b>•The transcription file will be sent as a .json file which can be opened using notepad
+        <b>•The app only accepts JPEG images and PDF files.It can process multiple images but only one pdf file at a time. If files are more than 5MB, consider uploading in chunks.
+          <b>Please rename your files without any spaces inbetween before uploading.</b>
+
+          <br><br><img src="https://imagetoaudio.s3.amazonaws.com/ezgif.com-gif-maker.gif" class='center'></img>
+
+
+          <br><br>
+
+          <b>•It may take upto 15 mins to process and send the audio file to your inbox, depending on the size of the images and files uploaded</b>
+
          </b><br><br>
         <!-- •Alternatively you can follow the instructions:<br>
         a) Open your Google Admin console (admin.google.com).<br>
