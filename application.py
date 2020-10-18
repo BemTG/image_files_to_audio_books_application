@@ -14,13 +14,13 @@ application= app = Flask(__name__)
 
 
 s3 = boto3.resource('s3',
-                   aws_access_key_id='AKIAXQGTBX4MVXKBWGMY',
-aws_secret_access_key= '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',
+                   aws_access_key_id='AKIAXQGTBX4M7V5HEPUX',
+aws_secret_access_key= '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',
                     region_name='us-east-1'
                      )
 
-dynamodb = boto3.resource('dynamodb',aws_access_key_id='AKIAXQGTBX4MVXKBWGMY',
-aws_secret_access_key= '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',
+dynamodb = boto3.resource('dynamodb',aws_access_key_id='AKIAXQGTBX4M7V5HEPUX',
+aws_secret_access_key= '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',
                     region_name='us-east-1')
 
 
