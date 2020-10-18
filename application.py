@@ -14,8 +14,8 @@ application= app = Flask(__name__)
 
 
 s3 = boto3.resource('s3',
-                   aws_access_key_id='AKIAXQGTBX4M7V5HEPUX',
-aws_secret_access_key= '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',
+                   aws_access_key_id='',
+aws_secret_access_key= '',
                     region_name='us-east-1'
                      )
 
