@@ -6,6 +6,8 @@ import img2pdf as converter
 import random
 import string
 
+import config.py as con
+
 
 
 application= app = Flask(__name__)
@@ -14,13 +16,13 @@ application= app = Flask(__name__)
 
 
 s3 = boto3.resource('s3',
-                   aws_access_key_id='',
-aws_secret_access_key= '',
+                   aws_access_key_id=con.aws_access_key_id1,
+aws_secret_access_key= con.aws_secret_access_key1,
                     region_name='us-east-1'
                      )
 
-dynamodb = boto3.resource('dynamodb',aws_access_key_id='AKIAXQGTBX4M7V5HEPUX',
-aws_secret_access_key= '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',
+dynamodb = boto3.resource('dynamodb',aws_access_key_id=con.aws_access_key_id1,
+aws_secret_access_key= con.aws_secret_access_key1,
                     region_name='us-east-1')
 
 
